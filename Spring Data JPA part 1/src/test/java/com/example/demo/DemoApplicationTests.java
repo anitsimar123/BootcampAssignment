@@ -102,25 +102,23 @@ class DemoApplicationTests {
 
     @Test
     void testFindByAgeBetween(){
-        System.out.println(employeeRepository.findByAgeBetween(28,32));
+        List<Employee> byAgeBetween = employeeRepository.findByAgeBetween(28, 32);
+        byAgeBetween.stream().forEach(System.out::println);
     }
 
     @Test
     void testFindByNameLike(){
-        System.out.println(employeeRepository.findByNameLike("A%"));
+        List<Employee> byNameLike = employeeRepository.findByNameLike("A%");
+        byNameLike.stream().forEach(System.out::println);
+
     }
 
     @Test
 
     void testPaging(){
-        Pageable pageable =  PageRequest.of(0,1);
+        Pageable pageable =  PageRequest.of(0,1,Sort.by(Sort.Direction.ASC,"age"));
         Page<Employee> all = employeeRepository.findAll(pageable);
         all.forEach(System.out::println);
     }
 
-    @Test
-    void testPagingByAge(){
-        Iterable<Employee> all = employeeRepository.findAll(Sort.by("age"));
-        all.forEach(System.out::println);
-    }
 }
