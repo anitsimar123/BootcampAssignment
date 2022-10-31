@@ -73,7 +73,7 @@ public class MainController {
     }
 
     @PutMapping("/employees/{id}")
-    public void updateById(@RequestBody Employee user, @PathVariable int id) {
+    public void updateById(@Valid @RequestBody Employee user, @PathVariable int id) {
         employeeService.updateUserById(user, id);
     }
 

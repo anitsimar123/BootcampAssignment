@@ -14,10 +14,11 @@ public class EmployeeService {
     private static Set<Employee> employeeServiceSet = new HashSet<>();
 
 
+    private static int count=0;
     static {
-        employeeServiceSet.add(new Employee(1, "Amrit", 23));
-        employeeServiceSet.add(new Employee(2, "Rakesh", 26));
-        employeeServiceSet.add(new Employee(3, "Aarush", 24));
+        employeeServiceSet.add(new Employee(++count, "Amrit", 23));
+        employeeServiceSet.add(new Employee(++count, "Rakesh", 26));
+        employeeServiceSet.add(new Employee(++count, "Aarush", 24));
     }
 
 
@@ -30,6 +31,7 @@ public class EmployeeService {
     }
 
     public Employee addUser(Employee user) {
+        user.setId(++count);
         employeeServiceSet.add(user);
         return user;
     }
