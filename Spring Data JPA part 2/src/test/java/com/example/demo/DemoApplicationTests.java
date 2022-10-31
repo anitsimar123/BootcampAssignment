@@ -67,9 +67,6 @@ class DemoApplicationTests {
         employeeService.deleteStudents("Amrit");
     }
 
-    @Test
-    void testPaging(){
-        Pageable pageable = new PageRequest();
-    }
+
 
 }
