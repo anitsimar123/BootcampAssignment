@@ -6,11 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
+import java.awt.print.Pageable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -113,11 +114,68 @@ class DemoApplicationTests {
 
     }
 
+//    @Test
+//    void testPaging(){
+//        Pageable pageable =  PageRequest.of(0,1,Sort.by(Sort.Direction.ASC,"age"));
+//        Page<Employee> all = employeeRepository.findAll(pageable);
+//        all.forEach(System.out::println);
+//    }
+
     @Test
     void testPaging(){
-        Pageable pageable =  PageRequest.of(0,1,Sort.by(Sort.Direction.ASC,"age"));
-        Page<Employee> all = employeeRepository.findAll(pageable);
-        all.forEach(System.out::println);
+//        Page<Employee> all = employeeRepository.findAll(PageRequest.of(1, 2));
+//        all.forEach(System.out::println);
+
+//        Page<Employee> all = employeeRepository.findAll(PageRequest.of(0, 2, Sort.by("age")));
+//        all.forEach(System.out::println);
+
+//        Page<Employee> age = employeeRepository.findAll(PageRequest.of(0, 2, Sort.by("age").descending()));
+//        age.forEach(System.out::println);
+
+//        Page<Employee> age = employeeRepository.findAll(PageRequest.of(0, 2, Sort.Direction.DESC, "age"));
+//        age.forEach(System.out::println);
     }
 
+
+//    @Test
+//    public void testSorting(){
+//        employeeRepository.findAll(Sort.by("age"));
+//        employeeRepository.findAll(Sort.by(Sort.Direction.DESC,"age"));
+//        employeeRepository.findAll(Sort.by(Sort.Order.by("name")));
+
+//        Iterable<Employee> all = employeeRepository.findAll(Sort.by(Sort.Order.asc("name"), Sort.Order.desc("age")));
+//       all.forEach(System.out::println);
+//    }
+
+
+    @Test
+    public void testGetAll(){
+        employeeRepository.getAll(PageRequest.of(0,2, Sort.Direction.ASC,"age")).forEach(System.out::println);
+    }
+
+    @Test
+    public void testGetByNameAndLocation(){
+        employeeRepository.getByNameAndLoc("Amrit","Noida",PageRequest.of(0,3)).forEach(System.out::println);
+    }
+
+    @Test
+    public void testGetAllUsersNativeQuery(){
+        employeeRepository.getAllEmployee().forEach(System.out::println);
+    }
+
+    @Test
+    public void testGetAllUsersByNameAndLocNativeQuery(){
+        employeeRepository.getByNameAndLocNative("Amrit","Noida").forEach(System.out::println);
+    }
+
+    @Test
+    public void testGetAllUsersByAgeBetweenNativeQuery(){
+        employeeRepository.getAgeInBetween(20,25,PageRequest.of(0,2,Sort.by(Sort.Order.desc("age")))).forEach(System.out::println);
+    }
+
+    @Test
+    @Rollback(value = false)
+    public void testDeleteQuery(){
+        employeeRepository.deleteQuery("Amrit");
+    }
 }

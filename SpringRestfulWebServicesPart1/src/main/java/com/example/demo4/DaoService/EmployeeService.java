@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 @Service
 public class EmployeeService {
@@ -37,7 +38,7 @@ public class EmployeeService {
     }
 
     public void deleteById(int id) {
-        employeeServiceSet.removeIf(e -> e.getId() == id);
+        employeeServiceSet = employeeServiceSet.stream().filter(e->e.getId()!=id).collect(Collectors.toSet());
     }
 
     public void updateUserById(Employee employee, int id) {

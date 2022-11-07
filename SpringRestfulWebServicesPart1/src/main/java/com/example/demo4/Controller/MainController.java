@@ -64,7 +64,7 @@ public class MainController {
 
     @DeleteMapping("/employees/{id}")
     public ResponseEntity delete(@PathVariable("id") int id) {
-        if (!employeeService.findById(id).equals(id)) {
+        if (!(employeeService.findById(id).equals(id))) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         } else {
             employeeService.deleteById(id);
