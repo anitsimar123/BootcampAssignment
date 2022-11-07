@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d402e5e4-ca85-4653-9bad-d9ddcfed9c0b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Spring Data JPA part 1/src/main/java/com/example/demo/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring Data JPA part 1/src/main/java/com/example/demo/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Data JPA part 1/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring Data JPA part 1/src/test/java/com/example/demo/DemoApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/src/main/java/com/example/demo4/Controller/MainController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/src/main/java/com/example/demo4/Dao/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/src/main/java/com/example/demo4/DaoService/EmployeeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/src/main/java/com/example/demo4/Demo4Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/src/main/java/com/example/demo4/Exception/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/src/main/java/com/example/demo4/Exception/ErrorDetails.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/src/main/java/com/example/demo4/Exception/UserNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringRestfulWeb Part1/src/test/java/com/example/demo4/Demo4ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +28,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/amritpal/IdeaProjects/RestFulWebServicePart2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/amritpal/IdeaProjects/RestFulWebServicePart2&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
